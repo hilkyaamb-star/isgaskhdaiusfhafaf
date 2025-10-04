@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HBD HBD HBD 💛</title>
+<style>
+  body, html {
+    margin: 0; padding: 0;
+    height: 100%;
+    background: linear-gradient(135deg, #fceabb, #457a7a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #4a2c00;
+    overflow: hidden;
+  }
+
+  .message {
+    font-size: 1.8rem;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(255, 181, 0, 0.5);
+    backdrop-filter: blur(4px);
+    line-height: 1.5;
+    animation: fadeIn 1.5s ease forwards;
+  }
+
+  button {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    padding: 12px 28px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(90deg, #f8b500, #ffe066);
+    color: #4a2c00;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(248, 181, 0, 0.6);
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background: linear-gradient(90deg, #ffcf33, #ffb300);
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 193, 7, 0.8);
+  }
+
+  .star {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes fall {
+    0% { transform: translateY(-10vh); opacity: 1; }
+    100% { transform: translateY(110vh); opacity: 0; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="message">
+  Last page? Hmmm gimana yaa...<br>
+  Coba klik aja duluu 😆💫<br>🤍
+</div>
+
+<button id="surpriseBtn">Klik ini ✨</button>
+
+<audio id="bgMusic" src="hehehehehe.mp3" loop></audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+music.volume = 0.4;
+
+document.body.addEventListener("click", () => {
+  if (music.paused) {
+    music.play().catch(() => {});
+  }
+});
+
+// animasi bintang jatuh
+function createStar() {
+  const star = document.createElement("div");
+  star.classList.add("star");
+  star.style.left = Math.random() * window.innerWidth + "px";
+  star.style.animationDuration = 3 + Math.random() * 4 + "s";
+  document.body.appendChild(star);
+  setTimeout(() => star.remove(), 7000);
+}
+setInterval(createStar, 300);
+
+// tombol buka halaman baru
+document.getElementById("surpriseBtn").addEventListener("click", () => {
+  window.open("links.html", "_blank");
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Im Happy for youuuu mai meeii</title>
+<style>
+  body {
+    margin: 0; padding: 0;
+    background: linear-gradient(135deg, #263a47, #4a5b6a, #98a9be);
+    height: 100vh;
+    display: flex; justify-content: center; align-items: center;
+    font-family: Garamond, serif;
+    color: #004d40;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  #message {
+    font-size: 1.8rem;
+    max-width: 600px;
+    white-space: pre-wrap;
+    border: 2px solid #004d40;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(204, 216, 226, 0.8);
+    box-shadow: 0 0 15px rgba(70, 147, 134, 0.3);
+  }
+  button {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-family: Georgia, serif;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #263a47;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(70, 147, 134, 0.3);
+  }
+  button:hover {
+    background: #00332b;
+  }
+</style>
+</head>
+<body>
+
+<div>
+  <div id="message"></div>
+  <button id="nextBtn">Next</button>
+</div>
+
+<script>
+const text = `ooooooooooooooooooooooooooooooooooooooo
+
+
+Happy birthday Me
+aku ga nyangka aku bisa ngerayaain ultahmu yang ke 16, dikit lagi udah bisa bikin ktp
+
+Aku bangga, aku bersyukur, kamu juga harus bersyukur dengan hari mu saat ini. and im so prouddd of u kamu udah bisa bertahan sejauh ini
+today is ur dayy, u should cheer up for ur day askdjahdkjasdhlakjd, selamat ulang tahun, semoga panjang umur, kamu akan sehat selalu, berkatnya selalu melimpah
+segala kekurangan dan problem yang kamu lalui sekarang ini akan berakhir secepatnya, bahkan saat ini jugaaa
+Tuhan selalu memberkati kamuu, Tuhan juga menciptakan mu sambil tersenyum
+
+kamu bakal selalu seperti kidung agung 2:2 
+seperti bunga bakung di antara duri-duri demikianlah manisku (udah cukup sampai situ aja wkwkwk)
+ayatnya benar-benar cocok buat kamu, aku ngerasa setiap aku baca kidung agung aku selalu keinget kamu
+sebelum-sebelumnya, hari-hari mu berat, dan kamu udah lalui ituuuu semuuuaaa, berkat kamu sendiri, bantuan dari teman teman kamu, atau juga mungkin dari keluargamu
+im so proud of u, kamu berusaha keras banget. tapi apapun itu kamu harus tetap istirahat. 
+dan kamu masih punya aku, segala lelahmu bisa kamu lepasin semua ketika bersamaku. ANJAIIII KELAZZZZZZ
+
+Selamat Ulang tahunnn mai mee 
+wishh uu all the bestt 
+aku bakal selalu doain kamu.
+
+God bless u
+i loveee uu soooo muchhh
+
+
+
+19 Sept 25`;
+
+const messageEl = document.getElementById('message');
+let index = 0;
+
+function typeWriter() {
+  if (index < text.length) {
+    messageEl.textContent += text.charAt(index);
+    index++;
+    setTimeout(typeWriter, 50);
+  }
+}
+
+typeWriter();
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+  window.location.href = 'page3.html';
+});
+</script>
+
+</body>
+</html>

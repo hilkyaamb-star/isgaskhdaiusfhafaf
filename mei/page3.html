@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GWOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</title>
+<style>
+  body {
+    margin: 0; padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0d1214, #0d1214, #172834, #0f171d);
+  }
+  h2 {
+    text-align: center;
+    color: #f8f5f5;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    gap: 15px;
+    max-width: 900px;
+    margin: 20px auto;
+  }
+  .gallery img {
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 16px 50px rgba(22, 223, 250, 0.611);
+    transition: transform 0.577s ease;
+  }
+  .gallery img:hover {
+    transform: scale(1.30);
+  }
+  /* Popup */
+  .popup {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .popup.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  .popup-content {
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+  }
+  .popup-content img {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+  .caption {
+    margin-top: 12px;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  .close-btn {
+    position: absolute;
+    top: 8px; right: 12px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #888;
+  }
+  .close-btn:hover {
+    color: #444;
+  }
+  button {
+    display: block;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: none;
+    background: #007acc;
+    color: white;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #005fa3;
+  }
+</style>
+</head>
+<body>
+
+<h2>Gallery</h2>
+<div class="gallery">
+  <img src="photo/photo1.jpg" alt="Momen 1" data-caption="Ini waktu pertama kali kita foto bareng, terus difotoin sama sara, aku ngeliatnya lucu sekali. habis itu malah di cie cie in kasjdhakjsdhakjdhakjdhakjd" />
+  <img src="photo/photo2.jpg" alt="Momen 2" data-caption="Ini fotonya bagus banget, kaya pas banget lagi tatap-tatapan pengen buanget aku post di sg tapi kamu kayaknya ngga terlalu suka huhu akhirnya gajadi post" />
+  <img src="photo/photo3.jpg" alt="Momen 3" data-caption="Damn ini lucu banget apalagi di hari ulang tahunku kamu cetak foto e trus kamu tempel aowjaosijdad lucu sekalii, udah gitu fotonya didepan altar lagi wkwkwkwkk" />
+  <img src="photo/photo4.jpeg" alt="Momen 4" data-caption="Apapun itu aku selalu doain kamu okayyy? semua akan baik baik saja kalau Tuhan sudah menyertai kamuu" />
+  <img src="photo/photo5.jpg" alt="Momen 4" data-caption="ROBLOX ini kita ndaki banget, LOOK AT USSS, THATS CUTEEEEE" />
+  <img src="photo/photo15.jpg" alt="Momen 1" data-caption="Kamu lucu banget ini, katamu kaya lagi mau sekolah. kalau ndak salah ini kamu ke malay trus kamu pap ke aku, dan itu lucu sekaliiiii." />
+  <img src="photo/photo7.jpg" alt="Momen 2" data-caption="Kamu tau ngga aku sering dengar ceritamu banyak yang sedih banyak juga yang senang banyak juga yang kecewa. Mau jenis apapun itu, apapun obrolannya mau sedih, sakit, marah, kecea, senang, sedih, duka, suka, aku bakal selalu dengerin" />
+  <img src="photo/photo8.jpg" alt="Momen 3" data-caption="Foto me pas kamu lagi acara apa ya... " />
+  <img src="photo/photo9.jpg" alt="Momen 4" data-caption="Yang ini baru foto yang kamu kirim lalu aku yang gambar, bagus ngga gambarku? itu aku gambar buat kamu btw hahaahahhah" />
+  <img src="photo/photo10.jpg" alt="Momen 4" data-caption="You're my dream that I never want to wake up from" />
+  <img src="photo/photo11.jpg" alt="Momen 1" data-caption="Foto bareng husky, sama sama lucu, dan sekarang udah punya husky beneran" />
+  <img src="photo/photo12.jpg" alt="Momen 2" data-caption="Always remind yourself that you are very very very pretty, and blessed in so many ways" />
+  <img src="photo/photo13.jpg" alt="Momen 3" data-caption="Patpat pitik" />
+  <img src="photo/photo14.jpg" alt="Momen 4" data-caption="U are so beautiful oaisdoaidjaosidjaoisjdaoisdjaoidjaosidjaoidjasoidjaoidjaoisdjaoidjaocxzjvhkjvhxciuvyiuewyriuyaduifhafhhviauvhiuhvsivhsiuvhciuhviushvisuvhischviushvishcivshiuvhsiuvsv" />
+  <img src="photo/photo6.jpg" alt="Momen 4" data-caption="First time to photo u myself" />
+  <img src="photo/photo16.jpg" alt="Momen 1" data-caption="This is ur day, ill cheer u up" />
+  <img src="photo/photo17.jpg" alt="Momen 2" data-caption="Ini aku yang foto? wow lucu sekali kacamata nya jadi gede" />
+  <img src="photo/photo18.jpg" alt="Momen 3" data-caption="Run to me when the world feels too heavy, Okayyy??" />
+  <img src="photo/photo19.jpg" alt="Momen 4" data-caption="Happy birthdayy for my love" />
+  <img src="photo/photo20.jpg" alt="Momen 4" data-caption="ini pap sama kucing atau gimana ya, HAHAHAHAHAHAHAHAHAHA SAMA SAMA LUCUUUUU" />
+  <img src="photo/photo21.jpg" alt="Momen 1" data-caption="My happiest part of my day is when am talking to u" />
+  <img src="photo/photo22.jpg" alt="Momen 2" data-caption="Your peace is more important than proving yourself to anyone" />
+  <img src="photo/photo23.jpg" alt="Momen 3" data-caption="If I could give you one thing in life, i would give you the ability too see yourself through my eyes. only then will u relize how special you are to me" />
+  <img src="photo/photo24.jpg" alt="Momen 4" data-caption="I AM ALWAYS HERE FOR YOU, BUT PLEASE TELL ME IF YOURE EVER NOT OKAY. I WANT YOU TO BE HAPPY. I CARE ABOUT YOU MORE THAN YOU'LL EVER RELIZE" />
+  <img src="photo/photo25.jpg" alt="Momen 4" data-caption="Selamat HaBeDe yaaaaaaaaa" />
+  <img src="photo/photo26.jpg" alt="Momen 4" data-caption="Promise me you wont forget our laughs, our jokes, our smiles, our convertations, our plans, our tears, our memories, our experiences" />
+  <img src="photo/photo27.jpeg" alt="Momen 4" data-caption="I want to see you win, I wanr to see you achieve all your dreams because you deserve the world" />
+  <img src="photo/photo14.jpg" alt="Momen 4" data-caption="I CANT STOP THINKING ABOUT YOU. YOURE ALWAYS IN MY MIND <33" />
+  <img src="photo/photo6.jpg" alt="Momen 4" data-caption="I will always be your biggest supporter and will be there for u anytime." />
+  <img src="photo/photo16.jpg" alt="Momen 1" data-caption="I will love you each and everyday like the first day i fell in love with you... i will always be present in your life and what you are doing i promise to forgive you for any little mistakes" />
+  <img src="photo/photo17.jpg" alt="Momen 2" data-caption="I literally dont know how you do it all youre one of the bravest and strongest people ive ever known. im so proud of you and i just wanted to remind you i care about you so much. please take care about yourself a little extra today do whatever you need to do to be okay. youre doing better than you think." />
+  <img src="photo/photo18.jpg" alt="Momen 3" data-caption="When we first met, i was not looking for love, I was running away from it. But you were so kind that i felt my hearth slowly opening up to you and before i knew it, i was head over heels in love with you" />
+  <img src="photo/photo19.jpg" alt="Momen 4" data-caption="I will never get tired of you, keep telling me how you feel, what bothers you, tell me whats on your mind, the details about your day." />
+  <img src="photo/photo20.jpg" alt="Momen 4" data-caption="Ikan hiu jalan-jalan, i love u " />
+  <img src="photo/photo21.jpg" alt="Momen 1" data-caption="Your the best ever, youre absolutely gorgeous. and fill me with lots of joy, forever be my home" />
+  <img src="photo/photo28.jpg" alt="Momen 2" data-caption="Being with you showed me that love doesn’t always arrive with fireworks or grand gestures. Sometimes it comes quietly, in the way your presence makes everything feel lighter, in the way your words calm the storms in my mind. I never thought I could find comfort in someone the way I found it in you. And now, I can’t imagine my days without the warmth you bring."/>
+  <img src="photo/photo29.jpeg" alt="Momen 2" data-caption="Wherever life takes us, I know the journey will be worth it as long as you’re walking by my side. You make every uncertain step feel steady, every fear a little less scary. You are not just a person I love—you are my direction, my compass, and my reason to keep moving forward. With you, forever doesn’t sound impossible; it sounds like home."/>
+  <img src="photo/photo30.jpeg" alt="Momen 2" data-caption="Your smile carries a kind of magic that words will never fully describe. It lifts me up on the hardest days, and it reminds me that joy can be found in the simplest moments. Sometimes I catch myself staring, not because I forget the world—but because I realize the world feels complete when you’re smiling at me. You are the happiness I never knew I was missing."/>
+  <img src="photo/photo31.jpg" alt="Momen 2" data-caption="With you, the world feels softer, like the edges that used to cut me no longer exist. I don’t see chaos when you’re near—I see peace, I see comfort, I see love that makes every struggle worth facing. You’ve turned ordinary moments into memories I’ll treasure for a lifetime. And in those moments, I realize my forever has already started."/>
+  <img src="photo/photo5.jpg" alt="Momen 2" data-caption="You are not just a chapter in my life, you are the entire story I never thought I’d get to write. Every piece of me feels more alive with you—like I was waiting for your light all along. Without you, life would just be pages with no meaning. But with you, every page tells a story of love I want to read over and over again."/>
+  <img src="photo/photo33.png" alt="Momen 2" data-caption="Every time I look at you, I’m reminded that love doesn’t need to be perfect—it just needs to be real. And with you, everything is real"/> 
+  <img src="photo/photo34.jpeg" alt="Momen 2" data-caption="You’ve taught me that the best memories are not about where we are, but who we’re with."/>
+  <img src="photo/photo35.jpeg" alt="Momen 2" data-caption="In your eyes, I don’t just see love—I see home."/>
+  <img src="photo/photo36.jpg" alt="Momen 2" data-caption="Your presence is the calm in my storm, the steady hand when the world feels like it’s spinning too fast."/>
+  <img src="photo/photo37.jpeg" alt="Momen 2" data-caption="If I had to choose again, in this life or in any life after, it would always be you."/>
+  <img src="photo/photo38.png" alt="Momen 2" data-caption="When I count my blessings, I always end up realizing that every path, every mistake, every heartbreak was just leading me here—to you."/>
+  <img src="photo/photo39.png" alt="Momen 2" data-caption="My heart is safest with you, and that’s something I never thought I’d find in another person."/>
+  <img src="photo/photo40.jpg" alt="Momen 2" data-caption="You are my once-in-a-lifetime, my forever, my always."/>
+  <img src="photo/photo31.jpg" alt="Momen 2" data-caption="Sometimes I wonder how life would be if I hadn’t met you. Maybe the days would still pass, but without the same light, without the same meaning. You showed me that even the simplest moments—just sitting together, just talking about nothing—can turn into memories I’ll treasure for a lifetime."/>
+  <img src="photo/photo32.png" alt="Momen 2" data-caption="Aku kaget begitu ikutin disney princess beneran dapat mulan."/>
+  
+
+  
+</div>
+</div>
+
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <img src="" alt="Foto" id="popupImg" />
+    <div class="caption" id="popupCaption"></div>
+  </div>
+</div>
+
+<button id="nextBtn">Next</button>
+
+<audio id="bgMusic" src="selamathabede.mp3" loop></audio>
+
+<script>
+const gallery = document.querySelectorAll('.gallery img');
+const popup = document.getElementById('popup');
+const popupImg = document.getElementById('popupImg');
+const popupCaption = document.getElementById('popupCaption');
+const closeBtn = document.getElementById('closeBtn');
+
+
+gallery.forEach(img => {
+  img.addEventListener('click', () => {
+    popupImg.src = img.src;
+    popupCaption.textContent = img.dataset.caption;
+    popup.classList.add('active');
+  });
+});
+
+
+// Mainkan musik otomatis (beberapa browser mungkin butuh interaksi user)
+const music = document.getElementById('bgMusic');
+music.volume = 0.3;
+
+document.body.addEventListener('click', () => {
+  if (music.paused) music.play();
+});
+
+
+closeBtn.addEventListener('click', () => {
+  popup.classList.remove('active');
+});
+
+popup.addEventListener('click', (e) => {
+  if (e.target === popup) {
+    popup.classList.remove('active');
+  }
+});
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+  window.location.href = 'page4.html';
+});
+</script>
+
+</body>
+</html>
